@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  discord-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: discord_vc_notice_bot
+    restart: always # Botがクラッシュした場合に再起動
+    volumes:
+      - ./data:/app/data
